@@ -1,5 +1,5 @@
 # Dotfiles (catalina)
 
 ```shell
-bash <(curl -fsSL https://raw.githubusercontent.com/jmalloc/dotfiles/catalina/install)
+bash <(curl -fsSL https://raw.githubusercontent.com/parkertr/dotfiles/catalina/install)
 ```

@@ -9,8 +9,8 @@ set -o pipefail
 # DOTFILES_REPO_[PUBLIC|PRIVATE] is the name of the public and private dotfiles
 # repositories, respectively. The names are given as repository "slugs",
 # presumed to be hosted on GitHub.com.
-export DOTFILES_REPO_PUBLIC="jmalloc/dotfiles"
-export DOTFILES_REPO_PRIVATE="jmalloc/dotfiles-private"
+export DOTFILES_REPO_PUBLIC="parkertr/dotfiles"
+export DOTFILES_REPO_PRIVATE="parkertr/dotfiles-private"
 
 # DOTFILES_BRANCH is the name of the branch to be used on both the dotfiles and
 # dotfiles-private repositories.
