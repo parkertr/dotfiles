@@ -32,7 +32,6 @@ cask "visual-studio-code"
 
 # Install Apps form the App Store
 mas "1Password 7", id: 1333542190
-mas "Magnet", id: 441258766
 mas "Slack", id: 803453959
 
 # Install Fonts
