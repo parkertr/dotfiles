@@ -36,7 +36,7 @@ export DOTFILES_PATH_PRIVATE="$HOME/.dotfiles/private"
 
 # OP_ACCOUNT is your 1Password account name. If you have a personal account, use
 # the string "my".
-export OP_ACCOUNT="$(echo 'YnJpcy1wYXJrZXJzCg==' | base64 --decode)"
+export OP_ACCOUNT="$(echo 'YnJpc19wYXJrZXJzCg==' | base64 --decode)"
 
 # OP_EMAIL is the email address you used to sign into 1Password within.
 export OP_EMAIL="$(echo 'cGFya2VydHIyQGdtYWlsLmNvbQo=' | base64 --decode)"
