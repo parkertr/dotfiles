@@ -9,8 +9,8 @@ set -o pipefail
 # DOTFILES_REPO_[PUBLIC|PRIVATE] is the name of the public and private dotfiles
 # repositories, respectively. The names are given as repository "slugs",
 # presumed to be hosted on GitHub.com.
-export DOTFILES_REPO_PUBLIC="jmalloc/dotfiles"
-export DOTFILES_REPO_PRIVATE="jmalloc/dotfiles-private"
+export DOTFILES_REPO_PUBLIC="parkertr/dotfiles"
+export DOTFILES_REPO_PRIVATE="parkertr/dotfiles-private"
 
 # DOTFILES_BRANCH is the name of the branch to be used on both the dotfiles and
 # dotfiles-private repositories.
@@ -36,10 +36,10 @@ export DOTFILES_PATH_PRIVATE="$HOME/.dotfiles/private"
 
 # OP_ACCOUNT is your 1Password account name. If you have a personal account, use
 # the string "my".
-export OP_ACCOUNT="$(echo 'dGVhbV9hd2t3YXJkCg==' | base64 --decode)"
+export OP_ACCOUNT="$(echo 'YnJpc19wYXJrZXJzCg==' | base64 --decode)"
 
 # OP_EMAIL is the email address you used to sign into 1Password within.
-export OP_EMAIL="$(echo 'Y29udGFjdEBqYW1lc2hhcnJpcy5pZC5hdQo=' | base64 --decode)"
+export OP_EMAIL="$(echo 'cGFya2VydHIyQGdtYWlsLmNvbQo=' | base64 --decode)"
 
 # OP_ITEM_APPLEID is the name of the *LOGIN* containing your Apple ID.
 export OP_ITEM_APPLEID="Apple ID (AU)"
