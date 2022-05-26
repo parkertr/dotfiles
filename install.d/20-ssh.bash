@@ -5,7 +5,7 @@ PUBKEY="$HOME/.ssh/id_rsa.pub"
 
 if [ ! -e "$PRIVKEY" ]; then
     echo "Fetching private SSH key from 1Password..."
-    op get document --account="$OP_ACCOUNT" "$OP_ITEM_SSHKEY" > "$PRIVKEY.tmp"
+    op document get --account="$OP_ACCOUNT" "$OP_ITEM_SSHKEY" > "$PRIVKEY.tmp"
     chmod 600 "$PRIVKEY.tmp"
     mv "$PRIVKEY.tmp" "$PRIVKEY"
 fi

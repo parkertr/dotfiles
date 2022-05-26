@@ -109,7 +109,7 @@ while true; do
         break
     fi
 
-    op get item --account="$OP_ACCOUNT" "$OP_ITEM_APPLEID" | jq --raw-output '.details.fields[]? | select(.designation == "password") | .value' | tr -d '\n' | pbcopy
+    op item get --account="$OP_ACCOUNT" "$OP_ITEM_APPLEID" | jq --raw-output '.details.fields[]? | select(.designation == "password") | .value' | tr -d '\n' | pbcopy
     echo "Sign in to the App Store first. The password has been copied to the clipboard."
     mas open
 done
