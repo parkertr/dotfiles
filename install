@@ -91,11 +91,11 @@ while ! op vault list --account="$OP_ACCOUNT" > /dev/null 2>&1; do
     # Check if the 1Password account is already known to the CLI, and if so use
     # the "short form" sign-in syntax. This prevents the need to re-enter the
     # secret key if it is already known.
-    if op account list | grep "$OP_ACCOUNT" > /dev/null 2>&1; then
-        eval $(op signin --account "$OP_ACCOUNT")
-    else
-        eval $(op signin --account "${OP_ACCOUNT//_/-}.1password.com" "$OP_EMAIL")
+    if ! op account list | grep "$OP_ACCOUNT" > /dev/null 2>&1; then
+        eval $(op account add --address "${OP_ACCOUNT//_/-}.1password.com" --email "$OP_EMAIL")
     fi
+
+    eval $(op signin --account "$OP_ACCOUNT")
 done
 
 # TODO: https://github.com/mas-cli/mas/issues/417
