@@ -92,9 +92,9 @@ while ! op vault list --account="$OP_ACCOUNT" > /dev/null 2>&1; do
     # the "short form" sign-in syntax. This prevents the need to re-enter the
     # secret key if it is already known.
     if op account list | grep "$OP_ACCOUNT" > /dev/null 2>&1; then
-        eval $(op signin "$OP_ACCOUNT")
+        eval $(op signin --account "$OP_ACCOUNT")
     else
-        eval $(op signin "${OP_ACCOUNT//_/-}.1password.com" "$OP_EMAIL")
+        eval $(op signin --account "${OP_ACCOUNT//_/-}.1password.com" "$OP_EMAIL")
     fi
 done
 
