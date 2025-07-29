@@ -65,9 +65,4 @@
       Defaults:ALL !tty_tickets         # share sudo timestamp across terminals
     '';
   };
-
-  system.activationScripts.extraActivation.text = lib.mkAfter ''
-    chmod 0440 /etc/sudoers.d/10-nix-darwin-extra-config
-    sudo visudo --check --strict
-  '';
 }
