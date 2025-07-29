@@ -2,7 +2,7 @@
 set -e
 set -o pipefail
 
-export REPO="jmalloc/dotfiles"
+export REPO="parkertr/dotfiles"
 export BRANCH="nix"
 
 sudo -v

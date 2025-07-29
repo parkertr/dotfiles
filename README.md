@@ -1,5 +1,5 @@
 # Dotfiles
 
 ```shell
-bash <(curl -fsSL https://raw.githubusercontent.com/jmalloc/dotfiles/nix/install)
+bash <(curl -fsSL https://raw.githubusercontent.com/parkertr/dotfiles/nix/install)
 ```

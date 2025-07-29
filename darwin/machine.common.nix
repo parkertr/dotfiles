@@ -16,7 +16,7 @@
       NSAutomaticSpellingCorrectionEnabled = false;
 
       "com.apple.mouse.tapBehavior" = 1;
-      "com.apple.sound.beep.feedback" = 1; # beep when adjusting volume
+      "com.apple.sound.beep.feedback" = 0; # beep when adjusting volume
     };
 
     controlcenter = {

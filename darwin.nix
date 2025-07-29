@@ -8,8 +8,8 @@
 }:
 let
   user = {
-    name = "james";
-    home = "/Users/james";
+    name = "troy";
+    home = "/Users/troy";
   };
 
   modules = [
@@ -62,27 +62,19 @@ let
   ];
 in
 {
-  # M4 Mac mini
-  "XLHWC6CH2D" = nix-darwin.lib.darwinSystem {
+  # iMac
+  "C02YT06DJV3Y" = nix-darwin.lib.darwinSystem {
     modules = modules ++ [
       (import ./darwin/machine.desktop.nix)
-      { networking.hostName = "studio-mac"; }
+      { networking.hostName = "play-imac"; }
     ];
   };
 
-  # M1 Mac mini
-  "C07G60W2Q6P0" = nix-darwin.lib.darwinSystem {
-    modules = modules ++ [
-      (import ./darwin/machine.desktop.nix)
-      { networking.hostName = "workshop-mac"; }
-    ];
-  };
-
-  # MacBook Pro
-  "H34L3QX9TT" = nix-darwin.lib.darwinSystem {
+  # 2025 MacBook Pro
+  "H6J7XDDGHD" = nix-darwin.lib.darwinSystem {
     modules = modules ++ [
       (import ./darwin/machine.laptop.nix)
-      { networking.hostName = "james-mpb"; }
+      { networking.hostName = "troy-mpb"; }
     ];
   };
 }

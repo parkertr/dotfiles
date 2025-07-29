@@ -8,12 +8,12 @@
 
   programs.git = {
     enable = true;
-    userEmail = "contact@jamesharris.id.au";
-    userName = "James Harris";
+    userEmail = "parkertr2@gmail.com";
+    userName = "Troy Parker";
 
     signing = {
       signByDefault = true;
-      key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILkD50Q6rwx1QUZm3tUYT6tDqp9MzRGeVWI16mp43Hg+";
+      key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM6ksLkKL3NDOgaKxKo1l/aHNwDQIF0qrR2wJDLvrRE7";
     };
 
     # https://github.com/dandavison/delta
@@ -72,6 +72,10 @@
         "ssh://git@github.com" = {
           insteadOf = "https://github.com";
         };
+
+        "ssh://git@bitbucket.org" = {
+          insteadOf = "https://bitbucket.org";
+        };
       };
     };
 
@@ -93,17 +97,6 @@
       "debug.test"
       "go.work"
       "go.work.sum"
-    ];
-
-    includes = [
-      {
-        condition = "hasconfig:remote.*.url:git@github.com:airdial/**";
-        contents.user.email = "james@airdial.com";
-      }
-      {
-        condition = "hasconfig:remote.*.url:https://github.com/airdial/**";
-        contents.user.email = "james@airdial.com";
-      }
     ];
 
     aliases = {

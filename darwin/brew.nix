@@ -30,15 +30,11 @@
       "font-monaspace"
       "ghostty" # Nix package is marked as broken on Darwin
       "inkscape" # Nix package crashes.
-      "live-home-3d" # No Nix package.
       "slack" # Nix package didn't allow loading slack:// links from Safari
-      "steam"
     ];
 
     masApps = {
       "magnet" = 441258766;
-      "p-touch" = 1453365242;
-      "parcel" = 639968404;
       "xcode" = 497799835;
     };
   };

@@ -1,5 +1,5 @@
 {
-  description = "jmalloc's dotfiles flake";
+  description = "parkertr dotfiles flake";
 
   outputs =
     args@{ ... }:
