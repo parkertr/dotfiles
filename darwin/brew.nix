@@ -27,7 +27,9 @@
       "1password" # Nix package is marked as broken.
       "autodesk-fusion" # No nix package.
       "betterdisplay" # No nix package (macOS specific).
+      "brave-browser" # No nix package.
       "coscreen" # No Nix package.
+      "cursor" # Cursor nix is broken.
       "docker-desktop" # Docker Desktop
       "font-monaspace"
       "ghostty" # Nix package is marked as broken on Darwin
