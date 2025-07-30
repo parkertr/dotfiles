@@ -36,7 +36,6 @@
     # Aliases for things that are installed via Brew.
     shellAliases = {
       b = "bsctl";
-      c = "cursor";
       d = "docker";
       tp = "telepresence";
     };
