@@ -3,7 +3,7 @@
   system.defaults = {
     NSGlobalDomain = {
       AppleKeyboardUIMode = 3;
-      "com.apple.keyboard.fnState" = true;
+      "com.apple.keyboard.fnState" = false;
 
       ApplePressAndHoldEnabled = false;
       InitialKeyRepeat = 15;
@@ -16,7 +16,8 @@
       NSAutomaticSpellingCorrectionEnabled = false;
 
       "com.apple.mouse.tapBehavior" = 1;
-      "com.apple.sound.beep.feedback" = 0; # beep when adjusting volume
+      "com.apple.sound.beep.feedback" = 0; # do not beep when adjusting volume
+      "com.apple.trackpad.scaling" = 1.5; # make the mouse track faster across the screen
     };
 
     controlcenter = {
