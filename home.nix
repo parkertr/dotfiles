@@ -16,10 +16,12 @@
       pkgs.kcl
       pkgs.mob
       pkgs.nixfmt-rfc-style
+      pkgs.ngrok
       pkgs.nodejs
       pkgs.nodePackages.prettier
       pkgs.pgcli
       pkgs.protobuf # for protoc
+      pkgs.tableplus
       pkgs.unixtools.watch
       pkgs.vale
       pkgs.wabt
