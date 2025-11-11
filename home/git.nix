@@ -9,12 +9,12 @@
   programs.git = {
     enable = true;
 
-    settings = {
-      signing = {
-        signByDefault = true;
-        key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM6ksLkKL3NDOgaKxKo1l/aHNwDQIF0qrR2wJDLvrRE7";
-      };
+    signing = {
+      signByDefault = true;
+      key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM6ksLkKL3NDOgaKxKo1l/aHNwDQIF0qrR2wJDLvrRE7";
+    };
 
+    settings = {
       user = {
         email = "parkertr2@gmail.com";
         name = "Troy Parker";
