@@ -31,6 +31,7 @@
       "coscreen" # No Nix package.
       "cursor" # Cursor nix is broken.
       "docker-desktop" # Docker Desktop
+      "dropbox"
       "font-monaspace"
       "ghostty" # Nix package is marked as broken on Darwin
       "inkscape" # Nix package crashes.

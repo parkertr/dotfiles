@@ -12,6 +12,7 @@
       pkgs.google-chrome
       pkgs.graphviz
       pkgs.jq
+      pkgs.jre8
       pkgs.jwt-cli
       pkgs.kcl
       pkgs.mob
@@ -47,6 +48,7 @@
   imports = [
     ./home/aws.nix
     ./home/bat.nix
+    ./home/delta.nix
     ./home/direnv.nix
     ./home/ghostty.nix
     ./home/git.nix
