@@ -38,44 +38,42 @@
         };
       };
 
-      gpg = {
-        format = "ssh";
+      core = {
+        autocrlf = "input";
+        whitespace = "trailing-space,space-before-tab,tabwidth=4";
       };
 
-      extraConfig = {
-        core = {
-          autocrlf = "input";
-          whitespace = "trailing-space,space-before-tab,tabwidth=4";
-        };
+      diff = {
+        renames = true;
+        algorithm = "patience";
+      };
 
-        diff = {
-          renames = true;
-          algorithm = "patience";
-        };
+      format = {
+        pretty = "%C(dim cyan)%h%C(reset) %C(yellow)|%C(reset) %s%C(cyan)%d%C(reset) %C(dim)by %an %ar";
+      };
 
-        format = {
-          pretty = "%C(dim cyan)%h%C(reset) %C(yellow)|%C(reset) %s%C(cyan)%d%C(reset) %C(dim)by %an %ar";
-        };
+      help = {
+        autocorrect = 5;
+      };
 
-        help = {
-          autocorrect = 5;
-        };
+      commit = {
+        cleanup = "scissors";
+      };
 
-        commit = {
-          cleanup = "scissors";
-        };
+      tag = {
+        sort = "version:refname";
+      };
 
-        tag = {
-          sort = "version:refname";
-        };
+      fetch = {
+        prune = true;
+      };
 
-        fetch = {
-          prune = true;
-        };
+      pull = {
+        ff = "only";
+      };
 
-        pull = {
-          ff = "only";
-        };
+      gpg = {
+        format = "ssh";
       };
 
       alias = {
