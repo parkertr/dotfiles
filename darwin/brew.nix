@@ -19,6 +19,8 @@
       "hashicorp/tap/tfstacks" # No Nix package.
       "jmalloc/grit/grit" # No Nix package.
       "kcl-lang/tap/kcl-lsp" # No Nix package.
+      "mise" # Nix package is much older.
+      "skills" # No Nix package.
       "vsce" # No Nix package.
     ];
 
