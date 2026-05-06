@@ -1,4 +1,13 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
+let
+  # mas must run inside the user's launchd session to reach the App Store daemon.
+  # nix-darwin's homebrew activation runs as root, so masApps fails regardless of
+  # HOME. Use launchctl asuser + sudo -u to run mas in the correct session instead.
+  masApps = {
+    "magnet" = 441258766;
+    "xcode" = 497799835;
+  };
+in
 {
   homebrew = {
     enable = true;
@@ -39,10 +48,31 @@
       "linear-linear" # No nix package.
       "slack" # Nix package didn't allow loading slack:// links from Safari
     ];
-
-    masApps = {
-      "magnet" = 441258766;
-      "xcode" = 497799835;
-    };
   };
+
+  # Install App Store apps as the primary user via launchctl asuser so mas can
+  # reach the App Store daemon (which is tied to the user's launchd session).
+  system.activationScripts.masApps.text =
+    let
+      user = config.system.primaryUser;
+      mas = "${pkgs.mas}/bin/mas";
+      installs = builtins.concatStringsSep "\n" (
+        builtins.attrValues (
+          builtins.mapAttrs (name: id: ''
+            if /bin/launchctl asuser "$uid" /usr/bin/sudo -u ${user} ${mas} list | grep -q '^${toString id}\b'; then
+              echo "mas: ${name} already installed"
+            else
+              echo "mas: installing ${name} (${toString id})"
+              /bin/launchctl asuser "$uid" /usr/bin/sudo -u ${user} ${mas} install ${toString id} \
+                || echo "mas: warning: failed to install ${name}"
+            fi
+          '') masApps
+        )
+      );
+    in
+    ''
+      uid=$(id -u ${user} 2>/dev/null) || { echo "mas: user ${user} not found, skipping"; exit 0; }
+      ${installs}
+    '';
 }
+
