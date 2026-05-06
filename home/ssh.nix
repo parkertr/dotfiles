@@ -14,5 +14,9 @@
     extraConfig = ''
       UseKeychain yes
     '';
+
+    includes = [
+      "~/Library/Mobile\\ Documents/com~apple~CloudDocs/dotfiles/ssh/extra.conf"
+    ];
   };
 }
