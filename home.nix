@@ -19,7 +19,7 @@
       pkgs.nixfmt-rfc-style
       pkgs.ngrok
       pkgs.nodejs
-      pkgs.nodePackages.prettier
+      pkgs.prettier
       pkgs.pgcli
       pkgs.protobuf # for protoc
       pkgs.sqlc
@@ -34,7 +34,7 @@
     ];
 
     sessionVariables = {
-      PATH = "$HOME/bin:$PATH";
+      PATH = "$HOME/bin:$HOME/.local/bin:$PATH";
     };
 
     # Aliases for things that are installed via Brew.
