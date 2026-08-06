@@ -56,6 +56,7 @@
     ./home/k8s.nix
     ./home/less.nix
     ./home/make.nix
+    ./home/podman.nix
     ./home/python.nix
     ./home/ssh.nix
     ./home/starship.nix
