@@ -45,7 +45,7 @@ in
       "font-monaspace"
       "ghostty" # Nix package is marked as broken on Darwin
       "inkscape" # Nix package crashes.
-      "linear-linear" # No nix package.
+      "linear" # No nix package. (Renamed upstream from linear-linear.)
       "slack" # Nix package didn't allow loading slack:// links from Safari
     ];
   };
