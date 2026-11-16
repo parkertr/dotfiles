@@ -1,4 +1,9 @@
-{ config, lib, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 let
   # Each SSO session is one IAM Identity Center instance. Signing in to a
   # session once covers every profile that uses it.
@@ -102,6 +107,8 @@ in
     # The agent can only act in the profiles listed here, so every profile in
     # this list is one the agent can use, including any that can make changes.
     dotfiles.aws.mcpProfiles = lib.attrNames (lib.filterAttrs (_: p: p.mcp) ssoProfiles);
+
+    home.packages = [ pkgs.awscli2 ];
 
     home.file.aws = {
       enable = true;
