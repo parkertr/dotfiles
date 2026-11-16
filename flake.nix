@@ -23,13 +23,6 @@
       url = "github:zhaofengli-wip/nix-homebrew";
     };
 
-    # https://github.com/hraban/mac-app-util
-    # Ensures macOS applications are indexed by Spotlight
-    mac-app-util = {
-      url = "github:hraban/mac-app-util";
-      # nixpkgs is pinned to some specific hash
-    };
-
     # https://github.com/nix-community/home-manager
     home-manager = {
       url = "github:nix-community/home-manager";

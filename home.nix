@@ -16,7 +16,7 @@
       pkgs.jwt-cli
       pkgs.kcl
       pkgs.mob
-      pkgs.nixfmt-rfc-style
+      pkgs.nixfmt
       pkgs.ngrok
       pkgs.nodejs
       pkgs.prettier

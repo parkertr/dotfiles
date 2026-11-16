@@ -1,7 +1,6 @@
 {
   self,
   nix-darwin,
-  mac-app-util,
   home-manager,
   nix-homebrew,
   ...
@@ -36,14 +35,20 @@ let
       users.users.${user.name} = user;
     }
 
-    mac-app-util.darwinModules.default
-
     home-manager.darwinModules.home-manager
     {
       home-manager = {
         useGlobalPkgs = true;
         useUserPackages = true;
-        sharedModules = [ mac-app-util.homeManagerModules.default ];
+        sharedModules = [
+          {
+            # Copy (rather than symlink) apps so that Spotlight indexes them.
+            targets.darwin = {
+              copyApps.enable = true;
+              linkApps.enable = false;
+            };
+          }
+        ];
         users.${user.name} = import ./home.nix;
       };
     }
