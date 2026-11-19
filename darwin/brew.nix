@@ -24,6 +24,7 @@ in
 
     brews = [
       "adr-tools" # No Nix package. TODO: Try "adrs" Nix package.
+      "apm" # No recent Nix package.
       "clang-format" # For formatting .proto files in Visual Studio Code
       "hashicorp/tap/tfstacks" # No Nix package.
       "jmalloc/grit/grit" # No Nix package.
